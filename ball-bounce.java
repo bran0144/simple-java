@@ -3,7 +3,7 @@
 
 import java.util.*; 
 
-public class GetInputCLI { 
+public class BouncingBallCLI { 
     public static void main(String[] args) { 
        
         Scanner in = new Scanner(System.in); 
@@ -17,5 +17,10 @@ public class GetInputCLI {
         coefficient = in.nextDouble();
         System.out.print("Enter the number of bounces: ");
         bounces = in.nextInt();
+
+        double bounceHeight = height*Math.pow(coefficient,bounces);
+        String message = "After " + bounces +
+            " bounces the height of the ball is: " + bounceHeight + " feet";
+        System.out.println(message);
     }
 }
